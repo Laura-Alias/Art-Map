@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 const mapStyles = {
   map: {
     position: 'absolute',
-    width: '100%',
-    height: '100%'
+    width: '50%',
+    height: '50%'
   }
 };
 export class CurrentLocation extends React.Component {
@@ -20,6 +20,17 @@ export class CurrentLocation extends React.Component {
       }
     };
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.google !== this.props.google) {
+      this.loadMap();
+    }
+    if (prevState.currentLocation !== this.state.currentLocation) {
+      this.recenterMap();
+    }
+  }
+
+
   componentDidMount() {
     if (this.props.centerAroundCurrentLocation) {
       if (navigator && navigator.geolocation) {
@@ -37,24 +48,14 @@ export class CurrentLocation extends React.Component {
     this.loadMap();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.google !== this.props.google) {
-      this.loadMap();
-    }
-    if (prevState.currentLocation !== this.state.currentLocation) {
-      this.recenterMap();
-    }
-  }
 
   loadMap() {
     if (this.props && this.props.google) {
-      // checks if google is available
       const { google } = this.props;
       const maps = google.maps;
 
       const mapRef = this.refs.map;
 
-      // reference to the actual DOM element
       const node = ReactDOM.findDOMNode(mapRef);
 
       let { zoom } = this.props;
@@ -67,7 +68,7 @@ export class CurrentLocation extends React.Component {
           zoom: zoom
         }
       );
-      // maps.Map() is constructor that instantiates the map
+
       this.map = new maps.Map(node, mapConfig);
     }
   }
@@ -118,8 +119,8 @@ export default CurrentLocation;
 CurrentLocation.defaultProps = {
   zoom: 14,
   initialCenter: {
-    lat: -1.2884,
-    lng: 36.8233
+    lat: 53.350140,
+    lng: -6.266155
   },
   centerAroundCurrentLocation: false,
   visible: true
