@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import Header from './Header';
+import App from './App';
+import Form from './Form';
+import Footer from './Footer';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <div>
-    <Header /> 
-    <App />
+        <Header />
+        <App />
+        <Form />
+        <Footer />
     </div>,
     document.getElementById('root'));
 
