@@ -5,7 +5,7 @@ import "./Map.css";
 const mapStyles = {
   map: {
     position: 'absolute',
-    width: '50%',
+    width: '99%',
     height: '50%',
   }
 };

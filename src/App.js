@@ -42,6 +42,8 @@ onClose = props => {
       </CurrentLocation>
     );
   }
+
+  
 }
 
 
