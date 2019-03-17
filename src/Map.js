@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./Map.css";
+import "./App.css";
 
 const mapStyles = {
   map: {
     position: 'absolute',
-    width: '99%',
+    width: '100%',
     height: '50%',
   }
 };

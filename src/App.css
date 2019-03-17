@@ -1,15 +1,92 @@
+/* Header */
+
+img {
+  width: 20%;
+}
+
+h1 {
+  color: white;
+  font-family: 'Gill Sans';
+  float: right;
+  margin-right: 35%;
+  margin-top: 5%;
+  font-size: 5vw;
+}
+
+
+
+/* App.js */
+
 body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: black;
 }
 
-.gradient
-{
-  width: 100%;
-  height: 800px;
-  padding: 0px;
-  margin: 0px;
-  background-color: blue;
+/* Footer.js */
+
+p {
+  margin-left: 10px;
+  color: white;
+  font-family: 'Courier New';
 }
+
+/* Form.js */
+
+h2 {
+  margin-top: 1000px;
+  color: white;
+}
+
+/* Gradient.js */
+
+box {
+  padding-right: 100%;
+  color: #fff;
+background: linear-gradient(-45deg, #d04e4e, #d0944e, #4e84d0);
+background-size: 400% 400%;
+-webkit-animation: Gradient 5s ease infinite;
+-moz-animation: Gradient 5s ease infinite;
+animation: Gradient 5s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+
+
 

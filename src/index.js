@@ -4,13 +4,16 @@ import Header from './Header';
 import App from './App';
 import Form from './Form';
 import Footer from './Footer';
+import Gradient from './Gradient';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <div>
         <Header />
+        <Gradient />
         <App />
         <Form />
+        <Gradient />
         <Footer />
     </div>,
     document.getElementById('root'));
