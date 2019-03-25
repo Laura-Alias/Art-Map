@@ -49,8 +49,10 @@ form {
 }
 
 input {
-  padding-right: 100%;
+  padding-right: 58%;
+  padding-left: 42%;
   font-size: 20px;
+  text-align: center;
 }
 
 /* Gradient.js */

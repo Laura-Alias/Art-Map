@@ -7,12 +7,10 @@ class Form extends React.Component {
       super()
   
       this.state = {
-        name: '',
         latitude: '',
         longitude: '',
       }
   
-      this.handleSubmit = this.handleSubmit.bind(this);
       this.getMyLocation = this.getMyLocation.bind(this)
     }
     
@@ -33,9 +31,7 @@ class Form extends React.Component {
           this.setState({ latitude: 'err-latitude', longitude: 'err-longitude' })
         })
       }
-
-    
-
+  
     }
   
     render() {
@@ -47,7 +43,7 @@ class Form extends React.Component {
           <form onSubmit={this.handleSubmit} >
             <div className="form-group">
              <label for="nameImput">Name</label>
-             <input type="text" name="name" placeholder="Name" />
+             <input type="text" name="name" value={this.state.name} placeholder="Name" />
             </div>
             <div className="form-group">
                 <label for="latitudeImput">Latitude</label>
