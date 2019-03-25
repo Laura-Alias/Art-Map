@@ -24,6 +24,8 @@ body {
   background-color: black;
 }
 
+
+
 /* Footer.js */
 
 p {
@@ -34,9 +36,21 @@ p {
 
 /* Form.js */
 
-h2 {
-  margin-top: 1000px;
+h3 {
+  margin-top: 900px;
   color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input {
+  padding-right: 100%;
+  font-size: 20px;
 }
 
 /* Gradient.js */
@@ -44,11 +58,11 @@ h2 {
 box {
   padding-right: 100%;
   color: #fff;
-background: linear-gradient(-45deg, #d04e4e, #d0944e, #4e84d0);
-background-size: 400% 400%;
--webkit-animation: Gradient 5s ease infinite;
--moz-animation: Gradient 5s ease infinite;
-animation: Gradient 5s ease infinite;
+  background: linear-gradient(-45deg, #d04e4e, #d0944e, #4e84d0);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
