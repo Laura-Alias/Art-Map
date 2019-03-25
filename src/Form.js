@@ -14,6 +14,8 @@ class Form extends React.Component {
       this.getMyLocation = this.getMyLocation.bind(this)
     }
     
+    AddMarker() {}
+
     componentDidMount() {
       this.getMyLocation()
     }
@@ -40,7 +42,7 @@ class Form extends React.Component {
       return (
         <div>
           <h3>New Graffiti</h3>
-          <form onSubmit={this.handleSubmit} >
+          <form onSubmit={this.addMarker} >
             <div className="form-group">
              <label for="nameImput">Name</label>
              <input type="text" name="name" value={this.state.name} placeholder="Name" />
