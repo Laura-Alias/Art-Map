@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header';
-import App from './App';
-import Form from './Form';
+import MapWithForm from './MapWithForm';
 import Footer from './Footer';
 import Gradient from './Gradient';
 import * as serviceWorker from './serviceWorker';
@@ -11,8 +10,7 @@ ReactDOM.render(
     <div>
         <Header />
         <Gradient />
-        <App />
-        <Form />
+        <MapWithForm />
         <Gradient />
         <Footer />
     </div>,

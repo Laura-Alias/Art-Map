@@ -22,20 +22,22 @@ export class MapContainer extends Component {
 
   onMapClicked(mapProps, map, coord) {
     const { latLng } = coord;
-    const markersCopy = this.state.markers.slice(0);
     const newMarker = {
-      position: {
-        lat: latLng.lat(),
-        lng: latLng.lng()
-      }
+      latitude: latLng.lat(),
+      longitude: latLng.lng()
     };
-    markersCopy.push(newMarker);
-    this.setState({
-      markers: markersCopy
-    });
+    this.props.onMapClicked(newMarker);
   }
 
   onMarkerClick(props, marker, e) {
+    this.setState({
+      placeName: props.name,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+  }
+
+  onMarkerForm(props, marker, e) {
     this.setState({
       placeName: props.name,
       activeMarker: marker,
@@ -84,13 +86,16 @@ export class MapContainer extends Component {
           name="Current Location"
         />
         {/* These are the markers we add when we click on the map*/}
-        {this.state.markers.map((marker, index) => {
+        {this.props.markers.map((marker, index) => {
           return (
             <Marker
               key={index}
               onClick={this.onMarkerClick}
-              position={marker.position}
-              name="Place To Discover"
+              position={{
+                lat: marker.position.latitude,
+                lng: marker.position.longitude
+              }}
+              name={marker.name}
             />
           );
         })}
